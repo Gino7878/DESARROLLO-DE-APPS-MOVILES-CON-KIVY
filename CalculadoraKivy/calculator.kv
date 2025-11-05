@@ -1,0 +1,30 @@
+<CalculatorTabs>:
+    do_default_tab: False
+    BoxLayout:
+        orientation: 'vertical'
+
+        Image:
+            source: 'unt.png'
+            size_hint: (1, 0.3)
+            fit_mode: 'contain'
+
+        Label:
+            text: 'Calculadora UNT'
+            font_size: 28
+            color: 0, 0, 0, 1
+            size_hint: (1, 0.1)
+
+        TabbedPanel:
+            do_default_tab: False
+
+            TabbedPanelItem:
+                text: 'BÁSICA'
+                BasicCalculator:
+
+            TabbedPanelItem:
+                text: 'CIENTÍFICA'
+                ScientificCalculator:
+
+            TabbedPanelItem:
+                text: 'COMPLEJOS'
+                ComplexCalculator:
